@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+
+response:
+  time:
+    keys:
+      - dataTime
+      - maxITime
+      - maxLoadRateTime
+      - maxPTime
+      - maxUTime
+      - maxUnbTime
+      - minITime
+      - minLoadRateTime
+      - minPTime
+      - minUTime
+      - begDate

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.demo.dao.UserMapper">
+
+    <resultMap type="com.test.demo.model.po.UserPo" id="UserMap">
+        <result property="id" column="id" />
+        <result property="name" column="name" />
+        <result property="age" column="age" />
+        <result property="email" column="email" />
+        <result property="createTime" column="create_time" />
+        <result property="date" column="date" />
+    </resultMap>
+    <select id="selectUserByCondition" resultType="com.test.demo.model.po.UserPo">
+        select  * from user
+        <where>
+         <if test="  age!=null  and age !=''">
+          <if test='age=="4"'>
+          age=#{age}
+          </if>
+         </if>
+        </where>
+    </select>
+    
+</mapper>
