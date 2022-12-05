@@ -50,6 +50,17 @@ public class UserController {
      */
     @Resource
     private UserService userService;
+    
+    
+       @GetMapping("select3")
+    public  List<UserPo> select3() {
+            Long id = 1584749447070511105L;
+        Integer age =4;
+        //sql判断输入字符串和正数
+     List<UserPo> l = userService.selectUserByCondition1("4");
+        return l;
+    }
+    
 
     /**
      * 通过主键查询单条数据 mybatis自带的分页
